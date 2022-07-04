@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>双飞翼实现</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .top {
+                height: 80px;
+                background-color: #ccc;
+            }
+
+            .footer {
+                height: 80px;
+                background-color: #ccc;
+            }
+
+            .container .middle {
+                height: 260px;
+                width: 100%;
+                background-color: red;
+
+            }
+
+            .container .middle .middle-wrap {
+                margin-left: 200px;
+                margin-right: 200px;
+            }
+
+            .container .left {
+                height: 260px;
+                width: 200px;
+                background-color: yellow;
+                margin-left: -100%;
+            }
+
+            .container .right {
+                height: 260px;
+                width: 200px;
+                background-color: pink;
+                margin-left: -200px;
+            }
+
+            .container .column {
+                float: left;
+            }
+
+            /* 清除浮动 */
+            .clearfix::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="top">我是头部</div>
+        <div class="container clearfix">
+            <div class="middle column">
+                <div class="middle-wrap">
+                    <h4>我是中间显示区域</h4>
+                    <p>核心显示区域</p>
+                </div>
+            </div>
+            <div class="left column">
+                <h4>我是左边</h4>
+                <p>左边显示区域</p>
+            </div>
+            <div class="right column">
+                <h4>我是右边</h4>
+                <p>右边显示区域</p>
+            </div>
+        </div>
+        <div class="footer">
+            我是尾部
+        </div>
+    </body>
+
+</html>
+
